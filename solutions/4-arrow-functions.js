@@ -1,3 +1,9 @@
-// BEGIN
+// BEGIN 
+const each = (collection, callback) => {
+  for (let i = 0; i < collection.length; i++) {
+    callback.call(collection[i]);
+  }
+};
 
-// END
+export default each;
+// END 

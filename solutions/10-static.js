@@ -1,9 +1,12 @@
 export default class Time {
   // BEGIN
-
+  static fromString(str) {
+    const [hours, minutes] = str.split(':').map(Number);
+    return new Time(hours, minutes);
+  }
   // END
 
-  constructor(hours, minutes) {
+  constructor(hours, minutes) { 
     this.minutes = minutes;
     this.hours = hours;
   }
